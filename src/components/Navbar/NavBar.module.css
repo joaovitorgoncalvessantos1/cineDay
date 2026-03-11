@@ -46,14 +46,19 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   transform: translateY(-50%);
   font-size: 1.3rem;
 }
+.Conteiner_links{
+    display: flex;
+    gap: 10px;
+}
 .logout{
     font-family: var(--font);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color:var(--primary);
 }
 .logout:hover{
   color:var(--primary-hover);
   cursor: pointer;
+ 
 }
