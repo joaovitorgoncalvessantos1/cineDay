@@ -1,0 +1,64 @@
+.NavBar{
+background-color: var(--navbar);
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.logoCineDiary{
+    display: block;
+
+}
+
+.Conteiner{
+    display: flex; 
+    align-items: center;
+    padding: 1em;
+    justify-content: space-around;
+}
+.Conteiner li{
+   list-style-type: none;
+}
+.searchBox{
+    position: relative;
+}
+.search{
+  
+    padding: .7rem 7rem;
+    border: none;
+    border-radius: 8px;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.search::placeholder{
+    color: var(--text-tertiary);
+       color:var( --text-secondary);
+  font-style: italic;  
+  font-size: 14px;  
+  opacity: 1;  
+    
+}
+.search:focus{
+    outline: none;
+      box-shadow: 0 0 0 2px #7B61FF;
+}
+.lupa{
+ position: absolute;
+ left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+}
+.Conteiner_links{
+    display: flex;
+    gap: 10px;
+}
+.logout{
+    font-family: var(--font);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color:var(--primary);
+}
+.logout:hover{
+  color:var(--primary-hover);
+  cursor: pointer;
+ 
+}

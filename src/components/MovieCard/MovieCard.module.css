@@ -1,0 +1,47 @@
+.conteinerMovieCard{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,180px);
+}
+
+.card{
+    background-color: var(--card);
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1.9rem; 
+   transition: transform 0.2s ease;
+}
+.card:hover{
+  transform: translateY(-6px);
+}
+.poster img{
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+.titulo h2{
+    font-family: var(--font);
+    text-align: center;
+    font-size: 1.5rem;
+font-weight: 200;
+margin-top: 5px;
+text-transform: capitalize;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  padding: 10px;
+  color: var(--text);
+}
+.botao{
+  padding: 5px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: var( --text-secondary);
+  color: var(--text-tercery);
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  
+}
