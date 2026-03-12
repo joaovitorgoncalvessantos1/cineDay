@@ -1,23 +1,29 @@
 import styles from "./MovieCard.module.css";
-import nimona from "./nimona.png";
 
-function MovieCard() {
+function MovieCard({ title, vote_average, release_date, poster_path }) {
+
+  const imgUrl = `https://image.tmdb.org/t/p/w500${poster_path}`
+
   return (
     <div className={styles.conteinerMovieCard}>
       <div className={styles.card}>
         <div className={styles.poster}>
-          <img src={nimona} alt="" />
+          <img src={imgUrl} alt={title} />
         </div>
+
         <div className={styles.titulo}>
-          <h2>titulo</h2>
+          <h2>{title}</h2>
         </div>
+
         <div className={styles.info}>
-          <span className={styles.nota}>⭐ 8.5</span>
-          <span className={styles.ano}>2014</span>
-        </div>    
-        <button className={styles.botao}>Adicionar a minha lista</button>
+          <span className={styles.nota}>⭐ {vote_average}</span>
+          <span className={styles.ano}>{release_date}</span>
+        </div>
+
+        <button className={styles.botao}>
+          Adicionar a minha lista
+        </button>
       </div>
-  
     </div>
   );
 }

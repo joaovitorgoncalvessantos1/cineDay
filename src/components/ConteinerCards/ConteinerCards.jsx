@@ -1,9 +1,9 @@
-import React from 'react'
+import styles from './ConteinerCards.module.css';
 import { Children } from 'react'
 
-function ConteinerCards({Children}) {
+function ConteinerCards({children}) {
   return (
-    <div>{Children}</div>
+    <div className={styles.ConteinerCards}>{children}</div>
   )
 }
 

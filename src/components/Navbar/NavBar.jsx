@@ -1,9 +1,13 @@
 import styles from "./NavBar.module.css";
 import { CiSearch } from "react-icons/ci";
-
 import logoCineDiary from "./logoCineDiary.png";
 
-function NavBar() {
+function NavBar({ setSearch }) {
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
     <nav className={styles.NavBar}>
       <ul className={styles.Conteiner}>
@@ -20,23 +24,29 @@ function NavBar() {
         <li>
           <div className={styles.searchBox}>
             <CiSearch className={styles.lupa} />
+
             <input
+              onChange={(event) => setSearch(event.target.value)}
               type="search"
               className={styles.search}
               name="search"
               id="search"
               placeholder="Pesquisar filmes,series..."
             />
+
           </div>
         </li>
+
         <li>
-    <div className={styles.Conteiner_links}>          <a className={styles.logout} href="#">
-            logout
-          </a>
-          
-          <a className={styles.logout} href="#">
-            Minha lista
-          </a></div>
+          <div className={styles.Conteiner_links}>
+            <a className={styles.logout} href="#">
+              logout
+            </a>
+
+            <a className={styles.logout} href="#">
+              Minha lista
+            </a>
+          </div>
         </li>
       </ul>
     </nav>
